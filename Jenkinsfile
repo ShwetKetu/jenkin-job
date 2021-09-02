@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/vytec-app/app.git'
+                git 'https://github.com/ShwetKetu/jenkin-job.git'
                 sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy"
             }
             post {  
