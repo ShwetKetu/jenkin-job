@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/ShwetKetu/jenkin-job.git'
-                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean deploy"
+                sh "mvn -s settings.xml -Dmaven.test.failure.ignore=true clean install"
             }
             post {  
                 success {
